@@ -1,0 +1,27 @@
+name: Delivery readiness
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - id: readiness
+        uses: zhipei-dev/delivery-readiness-guard@v1
+        with:
+          mode: report
+
+      - name: Print readiness result
+        run: |
+          echo "status=${{ steps.readiness.outputs.status }}"
+          echo "required_failures=${{ steps.readiness.outputs.required_failures }}"
+          echo "recommended_failures=${{ steps.readiness.outputs.recommended_failures }}"
+          echo "report_path=${{ steps.readiness.outputs.report_path }}"
+          cat "${{ steps.readiness.outputs.report_path }}"
