@@ -1,0 +1,13 @@
+bin/
+obj/
+data/*.db*
+**/data/*.db*
+.nuget/
+.npm-cache/
+.dotnet-home*/
+.temp/
+node_modules/
+test-results/
+playwright-report/
+TestResults/
+/OpsReconciliation.slnx

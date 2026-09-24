@@ -1,0 +1,7 @@
+payment_id,amount,currency,reference
+exact-1,100.00,USD,pay-001
+amount-1,70.00,USD,pay-002
+currency-1,20.00,EUR,pay-003
+duplicate-1,30.00,USD,pay-004
+duplicate-1,30.00,USD,pay-005
+orphan-1,9.00,USD,pay-006

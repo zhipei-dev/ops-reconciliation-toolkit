@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Operations Reconciliation Toolkit</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <main>
+    <h1>Operations Reconciliation Toolkit</h1>
+    <p>Upload synthetic CSV batches and receive an explainable deterministic reconciliation.</p>
+    <section>
+      <label>Orders CSV <input id="orders" type="file" accept=".csv"></label>
+      <button onclick="upload('orders')">Upload orders</button><span id="ordersResult"></span>
+    </section>
+    <section>
+      <label>Payments CSV <input id="payments" type="file" accept=".csv"></label>
+      <button onclick="upload('payments')">Upload payments</button><span id="paymentsResult"></span>
+    </section>
+    <section><button id="run" onclick="run()">Run reconciliation</button></section>
+    <h2>Summary</h2><div id="summary"></div>
+    <h2>Anomalies and results</h2>
+    <table><thead><tr><th>Type</th><th>Identifier</th><th>Reason</th><th>Message</th></tr></thead><tbody id="items"></tbody></table>
+    <h2>Audit</h2><pre id="audit"></pre>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

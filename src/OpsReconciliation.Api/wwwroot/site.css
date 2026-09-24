@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #182230;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background: #165dff;
+  color: white;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5rem;
+  border: 1px solid #dce3ee;
+  text-align: left;
+}
+
+pre {
+  overflow: auto;
+}

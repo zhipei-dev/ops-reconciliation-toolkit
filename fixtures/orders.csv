@@ -1,0 +1,6 @@
+order_id,amount,currency,description
+exact-1,100.00,USD,"Exact, quoted description"
+missing-1,50.00,USD,No payment
+amount-1,75.00,USD,Wrong amount
+currency-1,20.00,USD,Wrong currency
+duplicate-1,30.00,USD,Two payments
