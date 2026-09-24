@@ -25,6 +25,15 @@ npm ci
 npm run test:e2e
 ```
 
+
+Start the API/dashboard locally:
+
+```bash
+dotnet run --project src/OpsReconciliation.Api/OpsReconciliation.Api.csproj --launch-profile http
+```
+
+Open `http://localhost:5078`.
+
 Use `fixtures/orders.csv` and `fixtures/payments.csv` for the complete synthetic scenario.
 
 ## Validation
@@ -40,3 +49,9 @@ The MVP produces six explicit outcomes: `MATCHED`, `MISSING_PAYMENT`, `ORPHAN_PA
 ## Limitations
 
 All money is invariant-culture `decimal`; currencies are explicit and no FX conversion exists. Uploads are limited to 1 MiB CSV files. This is a single-process portfolio demonstration, not production-ready software, an accounting system, identity system, or high-volume ingestion platform.
+## Handoff and support
+
+- [Demo deployment and handoff](DEPLOYMENT.md)
+- [Support](SUPPORT.md)
+- [Security and limitations](docs/SECURITY_AND_LIMITATIONS.md)
+
