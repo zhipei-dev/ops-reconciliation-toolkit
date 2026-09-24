@@ -2,6 +2,10 @@
 
 A public .NET 10 MVP for the operations-team problem of reconciling order exports against payment exports without opaque spreadsheet logic. It accepts synthetic CSV data, normalizes it, stores it in SQLite, produces deterministic and explainable outcomes, and exposes the result through an API and dashboard.
 
+## Client fit
+
+Relevant proof for CSV/data reconciliation, cross-system mismatch investigation, deterministic reporting, audit-trail work, and small operational data tools where explainability matters more than opaque spreadsheet formulas.
+
 ## Workflow
 
 Upload synthetic orders and payments CSV files. Each returns a batch ID and whether it was newly imported or reused. Reconcile the two batch IDs; the dashboard presents a result-type summary, explainable rows, audit history, and an escaped CSV export. Imports use a SHA-256 content hash plus source kind as an idempotency key.
