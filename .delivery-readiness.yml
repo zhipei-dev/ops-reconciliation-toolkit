@@ -1,0 +1,9 @@
+version: 1
+recommended_checks:
+  - dependency_lock
+  - security_guidance
+  - support_guidance
+  - architecture_guidance
+  - limitations_guidance
+  - workflow_permissions
+  - action_pinning
