@@ -10,6 +10,12 @@ Relevant proof for CSV/data reconciliation, cross-system mismatch investigation,
 
 Upload synthetic orders and payments CSV files. Each returns a batch ID and whether it was newly imported or reused. Reconcile the two batch IDs; the dashboard presents a result-type summary, explainable rows, audit history, and an escaped CSV export. Imports use a SHA-256 content hash plus source kind as an idempotency key.
 
+## UI proof
+
+![Operations reconciliation dashboard with explainable results and audit history](docs/assets/reconciliation-dashboard.png)
+
+*Real local browser capture from the verified Playwright workflow using the repository's synthetic orders and payments fixtures.*
+
 ## Architecture
 
 The ASP.NET Core minimal API hosts a static vanilla-JS dashboard. Core contains bounded CSV parsing, invariant `decimal` money normalization, deterministic rules, and CSV export. SQLite persists batches, normalized records, runs, result items, and audit events transactionally.
