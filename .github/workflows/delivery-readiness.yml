@@ -11,10 +11,10 @@ jobs:
   readiness:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - id: readiness
-        uses: zhipei-dev/delivery-readiness-guard@v1
+        uses: zhipei-dev/delivery-readiness-guard@462b37c452955523ab045221f0bb7ac284cf5d83 # v1
         with:
           mode: report
 
